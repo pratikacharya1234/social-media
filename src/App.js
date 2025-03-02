@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import Login from './components/Login';
-import CreateAccount from './components/CreateAccount';
-import Home from './components/Home';
-import Profile from './components/Profile';
-import Search from './components/Search';
-import Settings from './components/Settings';
+import Login from './Auth/Login';
+import CreateAccount from './Auth/CreateAccount';
+import Home from './Pages/Home';
+import Profile from './Pages/Profile';
+import Search from './Pages/Search';
+import Settings from './Pages/Settings';
 import NavBar from './components/NavBar';
-import './App.css'; // Import the CSS file
+import './App.css'; 
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
