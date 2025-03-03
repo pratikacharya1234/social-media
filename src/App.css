@@ -37,17 +37,30 @@
   }
 }
 
+/* Primary Colors */
+:root {
+  --vibrant-blue: #1E90FF;
+  --electric-purple: #9B4DFF;
+  --soft-coral: #FF6F61;
+  --mint-green: #00D1B2;
+  --dark-charcoal: #2E2E2E;
+  --light-grey: #F2F2F2;
+  --golden-yellow: #FFCC00;
+  --soft-lavender: #E3D9FF;
+}
+
 /* General styles */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-color: var(--light-grey);
+  color: var(--dark-charcoal);
   margin: 0;
   padding: 0;
 }
 
 /* NavBar styles */
 nav {
-  background-color: #333;
+  background-color: var(--vibrant-blue);
   padding: 1rem;
 }
 
@@ -70,7 +83,21 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #ff6347; /* Tomato color */
+  color: var(--electric-purple);
+}
+
+/* Buttons */
+button {
+  background-color: var(--electric-purple);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--soft-coral);
 }
 
 /* Form styles */
@@ -85,15 +112,20 @@ form {
 
 form h2 {
   margin-bottom: 1rem;
-  color: #333;
+  color: var(--vibrant-blue);
 }
 
-form input {
+form input,
+form textarea {
   width: 100%;
   padding: 0.5rem;
   margin-bottom: 1rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--light-grey);
   border-radius: 4px;
+}
+
+form input[type="file"] {
+  padding: 0;
 }
 
 form button {
@@ -116,10 +148,49 @@ form p {
 }
 
 form p a {
-  color: #333;
+  color: var(--vibrant-blue);
   text-decoration: none;
 }
 
 form p a:hover {
-  color: #ff6347; /* Tomato color */
+  color: var(--electric-purple);
+}
+
+/* Create Post styles */
+.create-post-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.create-post-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--vibrant-blue);
+}
+
+.create-post-container input,
+.create-post-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid var(--light-grey);
+  border-radius: 4px;
+}
+
+.create-post-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--electric-purple);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.create-post-container button:hover {
+  background-color: var(--soft-coral);
 }
